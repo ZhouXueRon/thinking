@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #ecedf2;
+}
+
+.container {
+    width: 1140px;
+    margin: 1em auto;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.title {
+    background: #5488d5;
+    color: #fff;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+
+.types {
+    flex: 1 0 auto;
+    color: #666;
+    background: #fff;
+    font-size: 14px;
+}
+
+.type-list {
+    display: flex;
+    padding-left: 20px;
+}
+
+.type-list .radio {
+    margin-right: 30px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.type-list .radio::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.type-list .radio::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 14px;
+    height: 14px;
+    background: #5488d5;
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+.type-list .radio.checked::after {
+    transform: translateY(-50%) scale(1);
+}
+
+.keyword {
+    background: #fff;
+    padding-right: 30px;
+}
+
+.input {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    height: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+.input::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('./search_icon.png') no-repeat center;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.input input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    padding-left: 1em;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    text-align: center;
+    font-size: 14px;
+    row-gap: 20px;
+    color: #333;
+}
+
+.list img {
+    width: 77px;
+    height: 77px;
+    display: block;
+    margin-bottom: 5px;
+    border: 2px solid #5f89cf;
+    border-radius: 10px 0 10px 0;
+}

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #000;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+audio {
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.container {
+    /* 总高度要是单个高度的倍数（即30的倍数） */
+    height: 420px;
+    overflow: hidden;
+}
+
+.lrc {
+    transition: 0.5s;
+}
+
+.lrc li {
+    height: 30px;
+    line-height: 30px;
+    transition: 0.2s;
+}
+
+.lrc li.active {
+    color: #fff;
+    transform: scale(1.3);
+}
